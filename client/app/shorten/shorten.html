@@ -5,7 +5,10 @@
 		ng-model='link.url' 
 		ng-minlength="17"
 		ng-required='true'
-	<button id='submit'>Shorten Link</button>
+		ng-model='data.url'
+		name='urlfield'
+		>
+	<button id='submit' ng-disabled='short.urlfield.$invalid' >Shorten Link</button>
 </form>
 
 </div>

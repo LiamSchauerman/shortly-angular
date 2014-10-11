@@ -158,8 +158,9 @@ input[type=url]:focus {
 .ng-valid input {
   outline: none;
   border-color: #9ecaed;
-  box-shadow: 0 0 10px lightgreen;
+  box-shadow: 0 0 10px green;
 }
+
 
 
 

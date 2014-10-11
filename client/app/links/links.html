@@ -1,6 +1,7 @@
 <div id='container' ng-controller='LinksController'>
+	Search: <input ng-model='searchText'>
   <ul id='allLinks'>
-  	<li ng-repeat="obj in data.links">
+  	<li ng-repeat="obj in data.links | filter:searchText">
 			<a href="{{obj.base_url}}/api/links/{{obj.code}}" ng-click='click(obj)'>
 		  	<div class='link visits'>
 				<h2>{{obj.title}}</h2>
