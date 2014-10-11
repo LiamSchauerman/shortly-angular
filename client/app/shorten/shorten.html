@@ -1,10 +1,14 @@
-<div id='container' ng-controller="LinksController">
+<div id='container' ng-controller="ShortenController">
 <!-- Your code here -->
-<form name='short' ng-submit='addLink()'>
-	<input type='url' ng-model='link.url'>
-	<button>Shorten Link</button>
+<form name='short' ng-submit='addLink()' novalidate>
+	<input type='url' 
+		ng-model='link.url' 
+		ng-minlength="17"
+		ng-required='true'
+	<button id='submit'>Shorten Link</button>
 </form>
 
 </div>
 
 
+<!-- when form is valid, reveal 'shorten link' button -->

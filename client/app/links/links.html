@@ -1,5 +1,13 @@
 <div id='container' ng-controller='LinksController'>
   <ul id='allLinks'>
-  	<li ng-repeat="link in data.links">{{link}}</li>
+  	<li ng-repeat="obj in data.links">
+			<a href="{{obj.base_url}}/api/links/{{obj.code}}" ng-click='click(obj)'>
+		  	<div class='link visits'>
+				<h2>{{obj.title}}</h2>
+	  			<h4>{{obj.base_url}}/api/links/{{obj.code}}</h4>
+	  			<h4>Visits: {{obj.visits}}</h4>
+				</div>
+			</a>
+  	</li>
   </ul>
 </div>

@@ -3,7 +3,7 @@ angular.module('shortly.shorten', [])
 .controller('ShortenController', function ($scope, $location, Links, $http) {
   // Your code here
   $scope.link = {
-  	url: null
+  	url: "http://"
   };
   $scope.addLink = function(){
 		console.log('addlink running');

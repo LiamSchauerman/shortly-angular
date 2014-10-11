@@ -58,6 +58,8 @@ h1 {
   margin-bottom: 5px;
   padding: 5px;
   min-height: 50px;
+  border:5px solid black;
+  font-family: ‘Arial Narrow’, sans-serif;
 }
 
 .link:hover {
@@ -145,4 +147,23 @@ input[type=url]:focus {
 .creator .message {
   clear: both;
 }
+
+.ng-invalid-minlength input {
+  outline: none;
+  border-color: red;
+  box-shadow: 0 0 3px red;
+
+}
+
+.ng-valid input {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px lightgreen;
+}
+
+
+
+
+
+
 
