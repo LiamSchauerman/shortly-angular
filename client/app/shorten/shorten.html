@@ -1,7 +1,10 @@
-<div id='container'>
+<div id='container' ng-controller="LinksController">
 <!-- Your code here -->
-<button ng-click='addLink()'>Add Link</button>
-<input type='textbox' >
+<form name='short' ng-submit='addLink()'>
+	<input type='url' ng-model='link.url'>
+	<button>Shorten Link</button>
+</form>
+
 </div>
 
 

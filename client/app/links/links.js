@@ -5,11 +5,13 @@ angular.module('shortly.links', [])
 
 	$scope.getLinks = function() {
 		Links.get()
-			.then(function(data){
-			//data = {links: resp.data}
-			console.log('in promise')
-			console.log(data)
-		})
+			.then(function(resp){
+				var shortenedArr = []
+				for (var i=0; i<resp.data.length; i++){
+					shortenedArr.push(resp.data[i].base_url+'/'+resp.data[i].code)
+				}
+				$scope.data.links = shortenedArr;
+			})
 
 	};
 	$scope.getLinks();

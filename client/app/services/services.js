@@ -14,6 +14,7 @@ angular.module('shortly.services', [])
   };
 
   var post = function(data){
+    console.log('inside post');
     return $http({
       method: 'POST',
       url: '/api/links',
