@@ -1,9 +1,11 @@
 angular.module('shortly.links', [])
 
-.controller('LinksController', function ($scope, Links) {
+.controller('LinksController', function ($scope, Links, $http) {
 	$scope.data = {};
-	$scope.getLinks = function(){
-		Links.fetchLinks().then(function(data){
+
+	$scope.getLinks = function() {
+		Links.get()
+			.then(function(data){
 			//data = {links: resp.data}
 			console.log('in promise')
 			console.log(data)

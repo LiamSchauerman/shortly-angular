@@ -4,19 +4,28 @@ angular.module('shortly.services', [])
   // Your code here
 // return an object containing the http response
 
-  var links = function() {
-    $http({
+  var get = function(){
+    return $http({
       method: 'GET',
       url: '/api/links'
-    })
-    .success(function(resp){
-      console.log('response')
-      console.log(resp)
-      return {links: resp.data}
-    })
+    }).success(function(resp){
+      return resp
+    });
   };
+
+  var post = function(data){
+    return $http({
+      method: 'POST',
+      url: '/api/links',
+      data: data
+    }).success(function(resp){
+      return resp
+    });
+  };
+
   return {
-    fetchLinks: links
+    get: get,
+    post: post
   }
 
 })
